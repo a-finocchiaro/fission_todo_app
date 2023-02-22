@@ -19,8 +19,6 @@ interface ApiReponse {
 module.exports.todo = async function(context: {request: Request, response: Response }): Promise<ApiReponse> {
   const method = context.request.method
 
-  console.log("method", method)
-
   let data: ServiceResponse
 
   switch (method) {
