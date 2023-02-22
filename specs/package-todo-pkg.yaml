@@ -1,0 +1,25 @@
+include:
+- nodejs.zip
+kind: ArchiveUploadSpec
+name: nodejs-zip-AFQG
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: todo-pkg
+  namespace: fission
+spec:
+  deployment:
+    checksum: {}
+  environment:
+    name: nodeenv
+    namespace: fission
+  source:
+    checksum: {}
+    type: url
+    url: archive://nodejs-zip-AFQG
+status:
+  buildstatus: pending
+  lastUpdateTimestamp: "2023-02-11T20:30:20Z"
