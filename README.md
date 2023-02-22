@@ -18,6 +18,11 @@ Build source code
 npm run build
 ```
 
+Compress the built version of the code
+```
+zip -jr nodejs.zip dist
+```
+
 Deploy to Fission
 ```
 fisssion spec apply
